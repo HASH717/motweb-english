@@ -10,61 +10,29 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "how-sponsored-cpa-offers-work",
-    title: "How sponsored CPA offers work",
-    description: "A clear guide to location-aware offers, advertiser requirements, and safe participation.",
+    slug: "how-free-activation-offers-work",
+    title: "How free activation offers work",
+    description: "A simple guide to choosing an offer, completing its steps, and unlocking activation.",
     category: "Offer guides",
     publishedAt: "2026-08-04",
-    readTime: "5 min read",
+    readTime: "4 min read",
     content: [
-      {
-        heading: "Why offers differ between visitors",
-        paragraphs: [
-          "CPA means cost per action. Advertisers make offers available for specific countries, devices, and audiences, so two visitors may see different choices.",
-          "The Mot Web Services server asks OGAds for offers using your country and device signals, then displays eligible options without exposing the private API key."
-        ]
-      },
-      {
-        heading: "Read the requirement before starting",
-        paragraphs: [
-          "An offer may ask you to install an app, complete a tutorial, answer a survey, or take another clearly stated action. Open the offer and review its instructions before submitting information.",
-          "Eligibility and completion decisions belong to the advertiser. An offer appearing in the feed does not guarantee that every visitor will qualify."
-        ]
-      },
-      {
-        heading: "Participate safely",
-        paragraphs: [
-          "Check the destination domain, read the advertiser's privacy policy, and never share an email or banking password. Do not use automated, duplicate, or misleading completion methods."
-        ]
-      }
+      { heading: "Why choices differ", paragraphs: ["Available choices depend on your country and device, so two visitors may see different options.", "Choose an option that matches your device and that you are comfortable completing."] },
+      { heading: "Read every step before starting", paragraphs: ["An offer may ask you to install an app, complete a tutorial, answer a survey, or finish another clearly stated task.", "Opening an offer alone is not enough. Complete every displayed step and allow a few minutes for confirmation."] },
+      { heading: "Participate safely", paragraphs: ["Check the destination website, read its privacy policy, and never share your email or banking password. Do not use automated, duplicate, or misleading completion methods."] }
     ]
   },
   {
     slug: "getting-started-with-canva-pro",
     title: "Getting started with Canva Pro",
-    description: "How to choose a sponsored offer and protect your account while working toward Canva Pro access.",
+    description: "How to choose an available offer and protect your account while unlocking Canva Pro.",
     category: "Canva",
     publishedAt: "2026-08-03",
     readTime: "4 min read",
     content: [
-      {
-        heading: "Choose a suitable offer",
-        paragraphs: [
-          "Open the Canva Pro offers page and choose an option that matches your device and that you are comfortable completing. The list is supplied live and may change over time."
-        ]
-      },
-      {
-        heading: "Follow the advertiser's instructions",
-        paragraphs: [
-          "The sponsored offer opens in a new tab. Read every requirement and complete it accurately. The advertiser determines whether the action qualifies."
-        ]
-      },
-      {
-        heading: "Keep your account secure",
-        paragraphs: [
-          "Never share your email password. Use a unique password for Canva, enable multi-factor authentication when available, and contact support if you have questions about the Mot Web Services offer page."
-        ]
-      }
+      { heading: "Choose a suitable offer", paragraphs: ["Open the Canva Pro page, enter your Canva email, and choose an option that matches your device. Available choices may change over time."] },
+      { heading: "Follow every instruction", paragraphs: ["The offer opens in a new tab. Read every requirement and complete it accurately, then return to check your activation status."] },
+      { heading: "Keep your account secure", paragraphs: ["Never share your email password. Use a unique password for Canva, enable multi-factor authentication when available, and contact support if you have questions."] }
     ]
   },
   {
@@ -75,25 +43,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-08-03",
     readTime: "6 min read",
     content: [
-      {
-        heading: "Start with unique passwords",
-        paragraphs: [
-          "Use a password manager to generate a different password for every service. Reusing one password can turn a single data breach into access to several accounts."
-        ]
-      },
-      {
-        heading: "Turn on multi-factor authentication",
-        paragraphs: [
-          "An authenticator app or security key adds a second layer of protection. Store recovery codes somewhere safe and offline."
-        ]
-      },
-      {
-        heading: "Review invitations and links",
-        paragraphs: [
-          "Check the sender and destination before opening an account invitation. Official service emails should take you to the provider's real domain, not a lookalike page.",
-          "Keep relevant advertiser confirmations and support conversations so you can explain a completion issue clearly."
-        ]
-      }
+      { heading: "Start with unique passwords", paragraphs: ["Use a password manager to generate a different password for every service. Reusing one password can turn a single data breach into access to several accounts."] },
+      { heading: "Turn on multi-factor authentication", paragraphs: ["An authenticator app or security key adds a second layer of protection. Store recovery codes somewhere safe and offline."] },
+      { heading: "Review invitations and links", paragraphs: ["Check the sender and destination before opening an account invitation. Official service emails should take you to the provider's real domain, not a lookalike page.", "Keep relevant confirmations and support conversations so you can explain an activation issue clearly."] }
     ]
   }
 ];

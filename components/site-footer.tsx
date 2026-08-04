@@ -5,7 +5,7 @@ const whatsappNumber = "213559086142";
 
 const legalLinks = [
   { href: "/privacy-policy", label: "Privacy Policy" },
-  { href: "/refund-policy", label: "CPA Offer Policy" },
+  { href: "/refund-policy", label: "Offer Policy" },
   { href: "/terms-of-service", label: "Terms of Service" }
 ];
 
@@ -15,7 +15,7 @@ export function SiteFooter() {
       <div className="container-shell grid gap-7 md:grid-cols-[1fr_auto] md:items-center">
         <div>
           <p className="text-base font-black text-white">Mot Web Services</p>
-          <p className="mt-2 max-w-xl text-sm leading-6 text-white/58">Location-aware sponsored offers and direct WhatsApp support from Mot Web Services.</p>
+          <p className="mt-2 max-w-xl text-sm leading-6 text-white/58">Simple Canva Pro activation and direct WhatsApp support from Mot Web Services.</p>
 
           <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-white/68">
             <Link href="/canva" className="focus-ring inline-flex items-center gap-2 rounded-[var(--radius)] transition hover:text-white">

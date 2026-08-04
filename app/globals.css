@@ -269,3 +269,12 @@ html[data-theme="light"] .payment-methods-dark {
 html[data-theme="light"] .payment-methods-light {
   display: block;
 }
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

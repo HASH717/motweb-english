@@ -20,7 +20,7 @@ export function EnrollmentForm() {
   return <form action={action} className="surface order-2 rounded-[var(--radius)] p-5 sm:p-7 lg:col-start-2 lg:row-span-2 lg:row-start-1">
     <p className="text-sm font-bold text-[#cf19dd]">Free activation</p>
     <h2 className="mt-2 text-2xl font-black text-white">Enter your Canva details</h2>
-    <p className="mt-3 text-sm leading-6 text-white/58">We use this email to send your Canva Pro invitation after OGAds confirms your offer completion.</p>
+    <p className="mt-3 text-sm leading-6 text-white/58">We use this email to send your Canva Pro invitation after your offer completion is confirmed.</p>
     <div className="mt-6 grid gap-5">
       <label className="grid gap-2"><span className="text-sm font-bold text-white">Full name</span><input required name="name" minLength={2} maxLength={120} autoComplete="name" className="focus-ring rounded-[var(--radius)] border border-[var(--color-input-border)] bg-[var(--color-input-background)] px-4 py-3 text-white" /></label>
       <label className="grid gap-2"><span className="text-sm font-bold text-white">Your Canva email</span><input required name="email" type="email" autoComplete="email" dir="ltr" className="focus-ring rounded-[var(--radius)] border border-[var(--color-input-border)] bg-[var(--color-input-background)] px-4 py-3 text-white" placeholder="name@example.com" /></label>
