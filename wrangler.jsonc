@@ -3,26 +3,16 @@
   "name": "motweb-english",
   "account_id": "45884cb54e46b6730d6f776b7e9bc128",
   "main": ".open-next/worker.js",
-  "compatibility_date": "2026-08-03",
+  "compatibility_date": "2026-08-04",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "motweb-english-orders",
-      "database_id": "1c9eab91-66ac-499a-a0b5-798e6d763aa8",
-      "migrations_dir": "migrations"
-    }
-  ],
   "vars": {
-    "NEXT_PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAADWOtryhjyNe5Wt0",
     "NEXT_PUBLIC_WHATSAPP_NUMBER": "213559086142",
     "NEXT_PUBLIC_SITE_URL": "https://motweb-english.motraxagency.workers.dev",
-    "CHARGILY_CHECKOUT_URL": "https://pay.chargily.net/api/v2/checkouts",
-    "CHARGILY_PUBLIC_KEY": "live_pk_RFLN32ZraydG2c34G6a0GlfAwfbxlKXD1aaQfdNp"
+    "OGADS_API_ENDPOINT": "https://saveapp.store/api/v2"
   },
   "observability": {
     "enabled": true

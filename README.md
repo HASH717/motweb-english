@@ -1,6 +1,6 @@
 # Mot Web Services — English
 
-The fully independent English storefront for Mot Web Services. It includes the store, Canva checkout flow, order tracking, legal pages, and an original English blog.
+The fully independent English storefront for Mot Web Services. It includes an OGAds-powered CPA offer feed, legal pages, and an original English blog.
 
 ## Local development
 
@@ -13,7 +13,7 @@ npm run dev
 
 ## Deployment
 
-The OpenNext build targets Cloudflare. The English deployment uses its own Cloudflare application and D1 database. It must also use an English-only Turnstile widget, payment webhook, and secrets.
+The OpenNext build targets Cloudflare Workers. Set the `OGADS_API_KEY` Worker secret before deployment; the key is used only by the server-side offer proxy and is never exposed to browsers.
 
 ```bash
 npm run build

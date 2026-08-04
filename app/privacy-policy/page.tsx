@@ -3,10 +3,10 @@ import { LegalPage, LegalSection } from "@/components/legal-page";
 export const metadata = { title: "Privacy Policy" };
 
 export default function PrivacyPolicyPage() {
-  return <LegalPage title="Privacy Policy" intro="This policy explains how Mot Web Services handles information when you buy a digital service or contact us." updatedAt="August 3, 2026">
-    <LegalSection title="Information we collect"><p>We collect your name, email address, order status, and payment identifiers needed to complete purchases and activation. Support conversations may be retained to resolve your request.</p></LegalSection>
-    <LegalSection title="How we use information"><p>We use your information to create the payment request, activate the service, deliver or track your invitation, prevent abuse, and provide support.</p><p>We do not sell your information. We share only what is necessary with service providers such as ChargilyPay, our database provider, and the product platform.</p></LegalSection>
-    <LegalSection title="Payment and security"><p>Payments are processed by ChargilyPay. We do not store card or sensitive bank-payment details on this website. Cloudflare Turnstile helps protect forms from automated abuse.</p></LegalSection>
-    <LegalSection title="Data retention and contact"><p>We retain order and support records for a reasonable period to provide service coverage, resolve disputes, and improve the service. For a privacy request, contact us on WhatsApp at <span dir="ltr">+213 559 086 142</span>.</p></LegalSection>
+  return <LegalPage title="Privacy Policy" intro="This policy explains how Mot Web Services handles information when displaying sponsored CPA offers." updatedAt="August 4, 2026">
+    <LegalSection title="Information used to select offers"><p>When you request the offer list, your IP address and browser user-agent are sent securely from our server to OGAds. These values are required to return offers appropriate for your country and device.</p><p>We do not expose our OGAds API key to your browser and we do not store your IP address in our application database.</p></LegalSection>
+    <LegalSection title="Third-party offers"><p>When you choose an offer, you leave Mot Web Services and visit an advertiser or offer provider. Their privacy policy and data practices apply to information you submit there.</p></LegalSection>
+    <LegalSection title="How we use information"><p>We use request information only to retrieve eligible offers, operate the website, prevent abuse, and respond to support requests. We do not sell personal information.</p></LegalSection>
+    <LegalSection title="Contact"><p>For a privacy request, contact us on WhatsApp at <span dir="ltr">+213 559 086 142</span>.</p></LegalSection>
   </LegalPage>;
 }

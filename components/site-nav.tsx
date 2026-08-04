@@ -64,7 +64,7 @@ export function SiteNav() {
             className="focus-ring hidden items-center gap-2 rounded-[var(--radius)] bg-[var(--color-accent)] px-4 py-2 text-sm font-bold text-white shadow-lg shadow-[#32a81f]/20 transition hover:bg-[#3ac724] sm:inline-flex"
           >
             <ShoppingBag aria-hidden="true" className="h-4 w-4" />
-            Buy now
+            View offers
           </Link>
           <button
             type="button"
@@ -106,7 +106,7 @@ export function SiteNav() {
               className="focus-ring mt-1 inline-flex items-center justify-center gap-2 rounded-[var(--radius)] bg-[var(--color-accent)] px-4 py-3 text-sm font-black text-white shadow-lg shadow-[#32a81f]/20"
             >
               <ShoppingBag aria-hidden="true" className="h-4 w-4" />
-              Buy now
+              View offers
             </Link>
           </div>
         </div>

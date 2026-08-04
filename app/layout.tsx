@@ -7,10 +7,10 @@ export const metadata: Metadata = {
     default: "Mot Web Services",
     template: "%s | Mot Web Services"
   },
-  description: "Trusted digital subscriptions, practical guides, and responsive support from Mot Web Services.",
+  description: "Location-aware sponsored offers, practical guides, and responsive support from Mot Web Services.",
   openGraph: {
     title: "Mot Web Services",
-    description: "Canva Pro for three years on your own email, backed by responsive support.",
+    description: "Browse sponsored CPA offers available for your location and device.",
     url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://motweb-english.motraxagency.workers.dev",
     siteName: "Mot Web Services",
     locale: "en_US",

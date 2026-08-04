@@ -24,10 +24,10 @@ export default function StorefrontPage() {
             Mot Web Services Store
           </div>
 
-          <h1 className="max-w-3xl text-4xl font-black leading-tight text-white sm:text-6xl">Trusted digital subscriptions with a fast, secure buying experience.</h1>
-          <p className="mt-5 text-2xl font-black leading-9 text-[#cf19dd]">Canva Pro for 3 years on your own email</p>
+          <h1 className="max-w-3xl text-4xl font-black leading-tight text-white sm:text-6xl">Discover sponsored offers selected for your device and location.</h1>
+          <p className="mt-5 text-2xl font-black leading-9 text-[#cf19dd]">Complete an available CPA offer to continue</p>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/66">
-            Mot Web Services gives you secure payment, clear activation, and direct support after your order. Canva Pro is available now with service coverage.
+            Mot Web Services connects you with third-party promotional offers through OGAds. Availability and completion requirements depend on the advertiser, your device, and your location.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -35,7 +35,7 @@ export default function StorefrontPage() {
               href="/canva"
               className="focus-ring inline-flex items-center justify-center gap-2 rounded-[var(--radius)] bg-[var(--color-accent)] px-6 py-3 text-sm font-black text-white shadow-lg shadow-[#32a81f]/25 transition hover:bg-[#3ac724]"
             >
-              Buy Canva Pro
+              View available offers
               <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
             </Link>
             <a
@@ -48,9 +48,9 @@ export default function StorefrontPage() {
 
           <div className="mt-10 grid gap-3 sm:grid-cols-3">
             {[
-              ["Secure payment", Shield],
-              ["Activation coverage", CheckCircle2],
-              ["Order tracking", Timer]
+              ["Secure offer feed", Shield],
+              ["Location matched", CheckCircle2],
+              ["Updated live", Timer]
             ].map(([label, Icon]) => (
               <div key={String(label)} className="flex items-center gap-3 rounded-[var(--radius)] border border-white/10 bg-white/[0.04] px-4 py-3">
                 <Icon aria-hidden="true" className="h-5 w-5 text-[#32a81f]" />
@@ -64,9 +64,9 @@ export default function StorefrontPage() {
           <div className="absolute end-10 top-10 h-20 w-20 rounded-full bg-gradient-to-b from-[#cf19dd] to-[#7658ff] blur-sm" />
           <div className="absolute bottom-8 start-8 h-12 w-12 rounded-full bg-gradient-to-b from-[#cf19dd] to-[#0bb8ef]" />
           <ProductCard
-            title="Canva Pro (3 Years)"
-            description="Canva Pro activated on your own email for three years, with support after purchase."
-            price="DZD 500"
+            title="Canva Pro Offers"
+            description="Browse sponsored CPA offers currently available for your country and device."
+            price="CPA offers"
             href="/canva"
             imageSrc="/images/services/canva.png"
           />
@@ -77,7 +77,7 @@ export default function StorefrontPage() {
         <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <h2 className="text-3xl font-black text-white">Products</h2>
-            <p className="mt-2 text-sm leading-6 text-white/58">Canva Pro is currently available. More services are coming back soon.</p>
+            <p className="mt-2 text-sm leading-6 text-white/58">Browse location-aware sponsored offers for Canva Pro access. More services are coming soon.</p>
           </div>
           <Link href="/canva" className="focus-ring inline-flex items-center gap-2 rounded-[var(--radius)] text-sm font-bold text-white/76 hover:text-white">
             Canva details
