@@ -1,51 +1,13 @@
-"use client";
+import { ArrowUpRight, RefreshCw, ShieldCheck } from "lucide-react";
+import type { PublicOffer } from "@/lib/ogads";
 
-import { useCallback, useEffect, useState } from "react";
-import { ArrowUpRight, Loader2, RefreshCw, ShieldCheck } from "lucide-react";
-
-type Offer = {
-  id: number;
-  name: string;
-  description: string;
-  imageUrl: string | null;
-  country: string | null;
-  device: string | null;
-  url: string;
-};
-
-export function OffersGrid() {
-  const [offers, setOffers] = useState<Offer[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  const loadOffers = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const response = await fetch("/api/offers", { cache: "no-store" });
-      const payload = await response.json() as { offers?: Offer[]; error?: string };
-      if (!response.ok) throw new Error(payload.error ?? "Offers could not be loaded.");
-      setOffers(Array.isArray(payload.offers) ? payload.offers : []);
-    } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "Offers could not be loaded.");
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  useEffect(() => { void loadOffers(); }, [loadOffers]);
-
-  if (loading) {
-    return <div className="surface grid min-h-64 place-items-center rounded-[var(--radius)] p-8 text-center"><div><Loader2 className="mx-auto h-9 w-9 animate-spin text-[#0bb8ef]" /><p className="mt-4 font-bold text-white">Finding offers available for you…</p></div></div>;
-  }
-
+export function OffersGrid({ offers, error }: { offers: PublicOffer[]; error?: string }) {
   if (error) {
-    return <div className="surface rounded-[var(--radius)] p-8 text-center"><p className="text-lg font-black text-white">Offers are temporarily unavailable</p><p className="mt-3 text-sm text-white/60">{error}</p><button type="button" onClick={() => void loadOffers()} className="focus-ring mt-5 inline-flex items-center gap-2 rounded-[var(--radius)] border border-white/15 px-5 py-3 text-sm font-black text-white"><RefreshCw className="h-4 w-4" /> Try again</button></div>;
+    return <div className="surface rounded-[var(--radius)] p-8 text-center"><p className="text-lg font-black text-white">Offers are temporarily unavailable</p><p className="mt-3 text-sm text-white/60">{error}</p><a href="/canva" className="focus-ring mt-5 inline-flex items-center gap-2 rounded-[var(--radius)] border border-white/15 px-5 py-3 text-sm font-black text-white"><RefreshCw className="h-4 w-4" /> Try again</a></div>;
   }
 
   if (offers.length === 0) {
-    return <div className="surface rounded-[var(--radius)] p-8 text-center"><p className="text-lg font-black text-white">No offers are available for your device or location right now.</p><button type="button" onClick={() => void loadOffers()} className="focus-ring mt-5 inline-flex items-center gap-2 rounded-[var(--radius)] border border-white/15 px-5 py-3 text-sm font-black text-white"><RefreshCw className="h-4 w-4" /> Refresh offers</button></div>;
+    return <div className="surface rounded-[var(--radius)] p-8 text-center"><p className="text-lg font-black text-white">No offers are available for your device or location right now.</p><a href="/canva" className="focus-ring mt-5 inline-flex items-center gap-2 rounded-[var(--radius)] border border-white/15 px-5 py-3 text-sm font-black text-white"><RefreshCw className="h-4 w-4" /> Refresh offers</a></div>;
   }
 
   return <div className="grid gap-4 md:grid-cols-2">
