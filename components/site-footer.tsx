@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, ShieldCheck } from "lucide-react";
 
@@ -36,10 +35,7 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-4 md:items-end">
-          <div className="p-0">
-            <Image src="/images/payment.png" alt="Available payment methods" width={96} height={40} className="payment-methods-dark h-10 w-auto object-contain" />
-            <Image src="/images/payment-transparent.png" alt="Available payment methods" width={96} height={40} className="payment-methods-light hidden h-10 w-auto object-contain" />
-          </div>
+          <p className="rounded-[var(--radius)] border border-[#32a81f]/30 bg-[#32a81f]/10 px-4 py-2 text-sm font-black text-[#8ee780]">No payment required · Complete one verified offer</p>
           <nav className="flex flex-wrap gap-3 text-sm font-semibold text-white/68 md:justify-end">
             {legalLinks.map((link) => (
               <Link key={link.href} href={link.href} className="focus-ring rounded-[var(--radius)] transition hover:text-white">

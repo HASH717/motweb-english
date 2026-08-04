@@ -1,6 +1,6 @@
 # Mot Web Services — English
 
-The fully independent English storefront for Mot Web Services. It includes an OGAds-powered CPA offer feed, legal pages, and an original English blog.
+The fully independent English storefront for Mot Web Services. Users enter their Canva email, complete one country-eligible OGAds offer instead of paying DZD 500, and unlock activation only after a verified conversion postback. The project also includes legal pages and an original English blog.
 
 ## Local development
 
@@ -13,7 +13,7 @@ npm run dev
 
 ## Deployment
 
-The OpenNext build targets Cloudflare Workers. Set the `OGADS_API_KEY` Worker secret before deployment; the key is used only by the server-side offer proxy and is never exposed to browsers.
+The OpenNext build targets Cloudflare Workers and uses the separate `motweb-english-orders` D1 database. Set `OGADS_API_KEY` and `OGADS_POSTBACK_SECRET` as Worker secrets; neither value is exposed to browsers. Configure OGAds to send `{aff_sub4}`, `{ran}`, and `{offer_id}` to the `/ogads/postback` endpoint.
 
 ```bash
 npm run build

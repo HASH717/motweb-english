@@ -9,6 +9,14 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "motweb-english-orders",
+      "database_id": "1c9eab91-66ac-499a-a0b5-798e6d763aa8",
+      "migrations_dir": "migrations"
+    }
+  ],
   "vars": {
     "NEXT_PUBLIC_WHATSAPP_NUMBER": "213559086142",
     "NEXT_PUBLIC_SITE_URL": "https://motweb-english.motraxagency.workers.dev",

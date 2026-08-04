@@ -56,12 +56,16 @@ function toPublicOffer(value: unknown): PublicOffer | null {
   };
 }
 
-export async function getOgAdsOffers(ip: string, userAgent: string): Promise<PublicOffer[]> {
+export async function getOgAdsOffers(ip: string, userAgent: string, enrollmentId?: string): Promise<PublicOffer[]> {
   const endpoint = process.env.OGADS_API_ENDPOINT ?? "https://saveapp.store/api/v2";
   const url = new URL(endpoint);
   url.searchParams.set("ip", ip);
   url.searchParams.set("user_agent", userAgent);
   url.searchParams.set("max", "8");
+  if (enrollmentId) {
+    url.searchParams.set("aff_sub4", enrollmentId);
+    url.searchParams.set("aff_sub5", "canva-pro");
+  }
 
   const response = await fetch(url, {
     headers: { accept: "application/json", authorization: `Bearer ${requireEnv("OGADS_API_KEY")}` },
