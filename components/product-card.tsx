@@ -54,7 +54,7 @@ export function ProductCard({ title, description, price, href, imageSrc, disable
           href={href}
           className="focus-ring mt-8 inline-flex w-full items-center justify-center gap-2 rounded-[var(--radius)] bg-[var(--color-accent)] px-4 py-3 text-sm font-black text-white shadow-lg shadow-[#32a81f]/20 transition hover:bg-[#3ac724]"
         >
-          View offers
+          Get Canva Pro
           <ArrowUpLeft aria-hidden="true" className="h-4 w-4" />
         </Link>
       ) : (

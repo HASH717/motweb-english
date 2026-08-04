@@ -19,5 +19,5 @@ export async function createEnrollmentAction(_: EnrollmentFormState, formData: F
     "INSERT INTO enrollments (id, buyer_email, buyer_name, status, created_at) VALUES (?, ?, ?, 'pending', ?)"
   ).bind(id, email, name, now).run();
 
-  redirect(`/canva/offers?enrollment=${encodeURIComponent(id)}`);
+  redirect(`/canva?enrollment=${encodeURIComponent(id)}`);
 }

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Gift, Menu, ShoppingBag, X } from "lucide-react";
+import { Crown, Gift, Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks: Array<{ href: string; label: string; featured?: boolean }> = [
@@ -63,8 +63,8 @@ export function SiteNav() {
             onClick={closeMenu}
             className="focus-ring hidden items-center gap-2 rounded-[var(--radius)] bg-[var(--color-accent)] px-4 py-2 text-sm font-bold text-white shadow-lg shadow-[#32a81f]/20 transition hover:bg-[#3ac724] sm:inline-flex"
           >
-            <ShoppingBag aria-hidden="true" className="h-4 w-4" />
-            View offers
+            <Crown aria-hidden="true" className="h-4 w-4" />
+            Get Canva Pro
           </Link>
           <button
             type="button"
@@ -105,8 +105,8 @@ export function SiteNav() {
               onClick={closeMenu}
               className="focus-ring mt-1 inline-flex items-center justify-center gap-2 rounded-[var(--radius)] bg-[var(--color-accent)] px-4 py-3 text-sm font-black text-white shadow-lg shadow-[#32a81f]/20"
             >
-              <ShoppingBag aria-hidden="true" className="h-4 w-4" />
-              View offers
+              <Crown aria-hidden="true" className="h-4 w-4" />
+              Get Canva Pro
             </Link>
           </div>
         </div>
