@@ -278,3 +278,43 @@ html[data-theme="light"] .payment-methods-light {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.waiting-card {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(11, 184, 239, 0.28);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.46), 0 0 64px rgba(11, 184, 239, 0.2), 0 0 42px rgba(207, 25, 221, 0.16);
+}
+
+.waiting-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 0%, rgba(11, 184, 239, 0.14), transparent 48%);
+}
+
+.waiting-indicator {
+  position: relative;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin-inline: auto;
+  filter: drop-shadow(0 0 22px rgba(11, 184, 239, 0.38));
+}
+
+.waiting-indicator__art { width: 100%; height: 100%; overflow: visible; }
+.waiting-indicator__orbit { fill: rgba(11, 184, 239, 0.06); stroke: rgba(255, 255, 255, 0.1); stroke-width: 5; }
+.waiting-indicator__trail { fill: none; stroke: #0bb8ef; stroke-width: 5; stroke-linecap: round; stroke-dasharray: 86 204; transform-origin: 60px 60px; animation: waiting-spin 1.35s linear infinite; }
+.waiting-indicator__clock { fill: rgba(207, 25, 221, 0.12); stroke: #fff; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; animation: waiting-breathe 1.8s ease-in-out infinite; transform-origin: 60px 60px; }
+.waiting-indicator__spark { fill: #32a81f; animation: waiting-spark 1.6s ease-in-out infinite; transform-origin: center; }
+.waiting-indicator__spark--two { fill: #cf19dd; animation-delay: -0.8s; }
+.waiting-live-dot { width: 0.55rem; height: 0.55rem; border-radius: 999px; background: #32a81f; animation: waiting-pulse 1.6s ease-out infinite; }
+
+@keyframes waiting-spin { to { transform: rotate(360deg); } }
+@keyframes waiting-breathe { 0%, 100% { opacity: 0.72; transform: scale(0.96); } 50% { opacity: 1; transform: scale(1.04); } }
+@keyframes waiting-spark { 0%, 100% { opacity: 0.25; transform: scale(0.7); } 50% { opacity: 1; transform: scale(1.25); } }
+@keyframes waiting-pulse { 0% { box-shadow: 0 0 0 0 rgba(50, 168, 31, 0.5); } 70% { box-shadow: 0 0 0 0.55rem rgba(50, 168, 31, 0); } 100% { box-shadow: 0 0 0 0 rgba(50, 168, 31, 0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .waiting-indicator__trail, .waiting-indicator__clock, .waiting-indicator__spark, .waiting-live-dot { animation: none; }
+}
