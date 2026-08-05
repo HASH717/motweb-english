@@ -17,6 +17,12 @@
       "migrations_dir": "migrations"
     }
   ],
+  "kv_namespaces": [
+    {
+      "binding": "EBOOKS_KV",
+      "id": "5e3c52b654db4f3fb3df85e65cfea592"
+    }
+  ],
   "vars": {
     "NEXT_PUBLIC_WHATSAPP_NUMBER": "213559086142",
     "NEXT_PUBLIC_SITE_URL": "https://motweb-english.motraxagency.workers.dev",

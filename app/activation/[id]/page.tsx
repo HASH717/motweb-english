@@ -10,7 +10,8 @@ export const metadata = { title: "Activation status" };
 export const dynamic = "force-dynamic";
 
 export default async function ActivationPage({ params }: { params: Promise<{ id: string }> }) {
-  const enrollment = await getEnrollment((await params).id);
+  const found = await getEnrollment((await params).id);
+  const enrollment = found?.item_type === "canva" && found.item_slug === "canva-pro" ? found : null;
   const whatsapp = requireEnv("NEXT_PUBLIC_WHATSAPP_NUMBER").replace(/[^\d]/g, "");
   if (!enrollment) return <main><SiteNav /><section className="container-shell grid min-h-[70vh] place-items-center"><div className="surface rounded-[var(--radius)] p-8 text-center"><XCircle className="mx-auto h-12 w-12 text-red-400" /><h1 className="mt-4 text-3xl font-black text-white">Activation request not found</h1><Link href="/canva" className="mt-6 inline-flex text-white underline">Start again</Link></div></section><SiteFooter /></main>;
   const complete = enrollment.status === "success";

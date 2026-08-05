@@ -16,7 +16,8 @@ export const dynamic = "force-dynamic";
 export default async function CanvaPage({ searchParams }: { searchParams: Promise<{ enrollment?: string }> }) {
   const whatsappNumber = requireEnv("NEXT_PUBLIC_WHATSAPP_NUMBER").replace(/[^\d]/g, "");
   const enrollmentId = (await searchParams).enrollment ?? "";
-  const enrollment = enrollmentId ? await getEnrollment(enrollmentId) : null;
+  const found = enrollmentId ? await getEnrollment(enrollmentId) : null;
+  const enrollment = found?.item_type === "canva" && found.item_slug === "canva-pro" ? found : null;
   let offers: PublicOffer[] = [];
   let offerError: string | undefined;
 

@@ -9,6 +9,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 const navLinks: Array<{ href: string; label: string; featured?: boolean }> = [
   { href: "/", label: "Store" },
   { href: "/canva", label: "Canva Pro" },
+  { href: "/ebooks", label: "eBooks" },
   { href: "/blog", label: "Blog" },
   { href: "#support", label: "Support" }
 ];

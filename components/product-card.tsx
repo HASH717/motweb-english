@@ -12,9 +12,10 @@ type ProductCardProps = {
   href?: string;
   imageSrc?: string;
   disabled?: boolean;
+  ctaLabel?: string;
 };
 
-export function ProductCard({ title, description, price, href, imageSrc, disabled = false }: ProductCardProps) {
+export function ProductCard({ title, description, price, href, imageSrc, disabled = false, ctaLabel = "Get Canva Pro" }: ProductCardProps) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 18 }}
@@ -54,7 +55,7 @@ export function ProductCard({ title, description, price, href, imageSrc, disable
           href={href}
           className="focus-ring mt-8 inline-flex w-full items-center justify-center gap-2 rounded-[var(--radius)] bg-[var(--color-accent)] px-4 py-3 text-sm font-black text-white shadow-lg shadow-[#32a81f]/20 transition hover:bg-[#3ac724]"
         >
-          Get Canva Pro
+          {ctaLabel}
           <ArrowUpLeft aria-hidden="true" className="h-4 w-4" />
         </Link>
       ) : (

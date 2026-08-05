@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, CheckCircle2, Shield, Sparkles, Timer } from "lucide-react";
+import { ArrowUpRight, BookOpen, CheckCircle2, Shield, Sparkles, Timer } from "lucide-react";
 import { ProductCard } from "@/components/product-card";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
@@ -73,6 +73,11 @@ export default function StorefrontPage() {
             imageSrc="/images/services/canva.png"
           />
         </div>
+      </section>
+
+      <section id="ebooks" className="container-shell py-16">
+        <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between"><div><div className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.18em] text-[#cf19dd]"><BookOpen className="h-4 w-4" /> New category</div><h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">eBooks</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-white/58">Build your digital library. Complete one available offer to unlock each title.</p></div><Link href="/ebooks" className="focus-ring inline-flex items-center gap-2 text-sm font-black text-white/76 hover:text-white">Browse eBooks <ArrowUpRight className="h-4 w-4" /></Link></div>
+        <div className="grid gap-5 lg:grid-cols-[1fr_1.4fr]"><ProductCard title="Atomic Habits" description="James Clear's practical guide to building good habits, breaking bad ones, and making small changes that compound." price="PDF" href="/ebooks/atomic-habits" imageSrc="/ebooks/atomic-habits/cover" ctaLabel="View eBook" /><div className="surface grid place-items-center rounded-[var(--radius)] border border-dashed border-white/15 p-8 text-center"><div><BookOpen className="mx-auto h-10 w-10 text-white/30" /><p className="mt-4 text-lg font-black text-white">More books coming soon</p><p className="mt-2 text-sm text-white/58">New titles will appear here as they are added.</p></div></div></div>
       </section>
 
       <section id="products" className="container-shell py-16">
