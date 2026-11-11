@@ -3,6 +3,18 @@ import { ArrowUpRight, BookOpen, CheckCircle2, Shield, Sparkles, Timer } from "l
 import { ProductCard } from "@/components/product-card";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://en.motweb.store",
+    languages: {
+      en: "https://en.motweb.store",
+      ar: "https://motweb.store",
+      "x-default": "https://motweb.store"
+    }
+  }
+};
 
 const products = [
   { title: "Netflix", imageSrc: "/images/services/netflix.png" },

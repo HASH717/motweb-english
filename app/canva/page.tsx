@@ -10,7 +10,18 @@ import { requireEnv } from "@/lib/config";
 import { getEnrollment } from "@/lib/enrollments";
 import { getOgAdsOffers, type PublicOffer } from "@/lib/ogads";
 
-export const metadata = { title: "Free Canva Pro Activation", description: "Complete one available offer to unlock your Canva Pro activation." };
+export const metadata = {
+  title: "Free Canva Pro Activation",
+  description: "Complete one available offer to unlock your Canva Pro activation.",
+  alternates: {
+    canonical: "https://en.motweb.store/canva",
+    languages: {
+      en: "https://en.motweb.store/canva",
+      ar: "https://motweb.store/canva",
+      "x-default": "https://motweb.store/canva"
+    }
+  }
+};
 export const dynamic = "force-dynamic";
 
 export default async function CanvaPage({ searchParams }: { searchParams: Promise<{ enrollment?: string }> }) {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Crown, Gift, Menu, X } from "lucide-react";
+import { Crown, Gift, Languages, Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks: Array<{ href: string; label: string; featured?: boolean }> = [
@@ -58,6 +58,17 @@ export function SiteNav() {
         </div>
 
         <div className="flex items-center gap-2">
+          <a
+            href="https://motweb.store"
+            hrefLang="ar"
+            lang="ar"
+            dir="rtl"
+            className="focus-ring hidden items-center gap-2 rounded-[var(--radius)] border border-white/[0.12] bg-white/[0.06] px-3 py-2 text-xs font-black text-white/78 transition hover:bg-white/[0.12] hover:text-white sm:inline-flex"
+            aria-label="عرض الموقع العربي"
+          >
+            <Languages aria-hidden="true" className="h-4 w-4" />
+            العربية
+          </a>
           <ThemeToggle />
           <Link
             href="/canva"
@@ -109,6 +120,17 @@ export function SiteNav() {
               <Crown aria-hidden="true" className="h-4 w-4" />
               Get Canva Pro
             </Link>
+            <a
+              href="https://motweb.store"
+              hrefLang="ar"
+              lang="ar"
+              dir="rtl"
+              onClick={closeMenu}
+              className="focus-ring mt-1 inline-flex items-center justify-center gap-2 rounded-[var(--radius)] border border-white/[0.12] bg-white/[0.06] px-4 py-3 text-sm font-black text-white"
+            >
+              <Languages aria-hidden="true" className="h-4 w-4" />
+              الموقع العربي
+            </a>
           </div>
         </div>
       ) : null}

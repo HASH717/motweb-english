@@ -7,7 +7,15 @@ import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Practical guides for digital subscriptions, Canva, and account security."
+  description: "Practical guides for digital subscriptions, Canva, and account security.",
+  alternates: {
+    canonical: "https://en.motweb.store/blog",
+    languages: {
+      en: "https://en.motweb.store/blog",
+      ar: "https://motweb.store/blog",
+      "x-default": "https://motweb.store/blog"
+    }
+  }
 };
 
 export default function BlogPage() {

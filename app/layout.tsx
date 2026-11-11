@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://motweb-english.motraxagency.workers.dev"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://en.motweb.store"),
   title: {
     default: "Mot Web Services",
     template: "%s | Mot Web Services"
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mot Web Services",
     description: "Complete one available offer to unlock your Canva Pro activation.",
-    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://motweb-english.motraxagency.workers.dev",
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://en.motweb.store",
     siteName: "Mot Web Services",
     locale: "en_US",
     type: "website"

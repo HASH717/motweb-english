@@ -23,9 +23,15 @@
       "id": "5e3c52b654db4f3fb3df85e65cfea592"
     }
   ],
+  "routes": [
+    {
+      "pattern": "en.motweb.store",
+      "custom_domain": true
+    }
+  ],
   "vars": {
     "NEXT_PUBLIC_WHATSAPP_NUMBER": "213559086142",
-    "NEXT_PUBLIC_SITE_URL": "https://motweb-english.motraxagency.workers.dev",
+    "NEXT_PUBLIC_SITE_URL": "https://en.motweb.store",
     "OGADS_API_ENDPOINT": "https://saveapp.store/api/v2"
   },
   "observability": {
